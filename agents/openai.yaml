@@ -1,0 +1,4 @@
+interface:
+  display_name: "华为运动健康云端导出"
+  short_description: "用户名密码与本人短信验证登录，按新版接口导出健康数据、字段说明及来源"
+  default_prompt: "使用 $huawei-health-cloud-export --username <我的华为账号> --password <我的密码>，等待我提交短信验证码，然后按接口导出最近30天的数据和字段mapping。"

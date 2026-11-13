@@ -1,0 +1,662 @@
+{
+  "apkVersion": "17.0.10.300",
+  "entryActivity": "com.huawei.ui.main.stories.health.activity.healthdata.HealthDatasActivity",
+  "clickableItemCount": 19,
+  "items": [
+    {
+      "category": "活动统计",
+      "name": "步数",
+      "viewId": "health_data_item_step_layout",
+      "clickCallback": "HealthDatasActivity$l",
+      "localTypesOrConfigKeys": [
+        40002
+      ],
+      "cloudTypeCandidates": [],
+      "cloudEndpoints": [
+        "/dataQuery/sport/v2/getSportsStat"
+      ],
+      "valueFields": "steps",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            567,
+            748,
+            749,
+            750,
+            751
+          ],
+          "needle": "health_data_item_step_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "活动统计",
+      "name": "距离",
+      "viewId": "health_data_item_dis_layout",
+      "clickCallback": "HealthDatasActivity$i",
+      "localTypesOrConfigKeys": [
+        40004
+      ],
+      "cloudTypeCandidates": [],
+      "cloudEndpoints": [
+        "/dataQuery/sport/v2/getSportsStat"
+      ],
+      "valueFields": "distance",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            568,
+            753,
+            754,
+            755,
+            756
+          ],
+          "needle": "health_data_item_dis_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "活动统计",
+      "name": "爬楼",
+      "viewId": "health_data_item_climb_layout",
+      "clickCallback": "HealthDatasActivity$f",
+      "localTypesOrConfigKeys": [],
+      "cloudTypeCandidates": [],
+      "cloudEndpoints": [
+        "/dataQuery/sport/v2/getSportsStat"
+      ],
+      "valueFields": "altitude/floor",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            569,
+            757,
+            758,
+            759,
+            760
+          ],
+          "needle": "health_data_item_climb_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "活动统计",
+      "name": "活动热量",
+      "viewId": "health_data_item_calorie_layout",
+      "clickCallback": "HealthDatasActivity$h",
+      "localTypesOrConfigKeys": [
+        40003
+      ],
+      "cloudTypeCandidates": [],
+      "cloudEndpoints": [
+        "/dataQuery/sport/v2/getSportsStat"
+      ],
+      "valueFields": "calorie",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            570,
+            761,
+            762,
+            763,
+            764,
+            771
+          ],
+          "needle": "health_data_item_calorie_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "运动能力",
+      "name": "最大摄氧量",
+      "viewId": "health_data_item_vo2max_layout",
+      "clickCallback": "HealthDatasActivity$p",
+      "localTypesOrConfigKeys": [
+        42006,
+        42007
+      ],
+      "cloudTypeCandidates": [
+        400028,
+        502004
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion",
+        "/dataQuery/health/getHealthStatisticsByVersion"
+      ],
+      "valueFields": "vo2Max/lastVo2Max/maxVo2Max/minVo2Max",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            580,
+            645,
+            646,
+            647,
+            648
+          ],
+          "needle": "health_data_item_vo2max_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "运动能力",
+      "name": "跑力",
+      "viewId": "health_data_item_running_layout",
+      "clickCallback": "HealthDatasActivity$m",
+      "localTypesOrConfigKeys": [],
+      "cloudTypeCandidates": [],
+      "cloudEndpoints": [
+        "/dataAnalyse/app/getRunLevel"
+      ],
+      "valueFields": "currentRunLevel/realRunLevel",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            585,
+            650,
+            651,
+            652,
+            653
+          ],
+          "needle": "health_data_item_running_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "运动能力",
+      "name": "训练状态",
+      "viewId": "health_data_item_state_index_layout",
+      "clickCallback": "HealthDatasActivity$n",
+      "localTypesOrConfigKeys": [],
+      "cloudTypeCandidates": [],
+      "cloudEndpoints": [
+        "/dataAnalyse/app/getRunLevel"
+      ],
+      "valueFields": "fitness/fatigue/condition",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            586,
+            654,
+            655,
+            656,
+            657
+          ],
+          "needle": "health_data_item_state_index_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "运动能力",
+      "name": "成绩预测",
+      "viewId": "health_data_item_achievement_layout",
+      "clickCallback": "HealthDatasActivity$e",
+      "localTypesOrConfigKeys": [],
+      "cloudTypeCandidates": [],
+      "cloudEndpoints": [
+        "/dataAnalyse/app/getRunLevel"
+      ],
+      "valueFields": "userRunLevelData.km5/km10/halfMarathon/marathon",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            196,
+            221,
+            587,
+            658,
+            659,
+            660,
+            663
+          ],
+          "needle": "health_data_item_achievement_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "运动能力",
+      "name": "乳酸阈值",
+      "viewId": "health_data_item_lactic_layout",
+      "clickCallback": "HealthDatasActivity$k",
+      "localTypesOrConfigKeys": [],
+      "cloudTypeCandidates": [
+        300012
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataLatest",
+        "/dataQuery/health/getHealthStatistics"
+      ],
+      "valueFields": "lthrHr/lthrPace/lastLthrHr/lastLthrPace",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            588,
+            666,
+            667,
+            668,
+            669
+          ],
+          "needle": "health_data_item_lactic_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "运动能力",
+      "name": "骑行FTP",
+      "viewId": "health_data_item_ftp_layout",
+      "clickCallback": "HealthDatasActivity$j",
+      "localTypesOrConfigKeys": [
+        "900200036",
+        "900200037"
+      ],
+      "cloudTypeCandidates": [],
+      "cloudEndpoints": [
+        "/achievement/v1/ftp:refresh",
+        "/dataStat/v1/basicCalculations/lifetimeStatistics:calculate"
+      ],
+      "valueFields": "FTP配置及lthr",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            592,
+            671,
+            672,
+            673,
+            773
+          ],
+          "needle": "health_data_item_ftp_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "健康状况",
+      "name": "心率",
+      "viewId": "health_data_item_bmp_layout",
+      "clickCallback": "HealthDatasActivity$g",
+      "localTypesOrConfigKeys": [
+        2002,
+        2018,
+        2105
+      ],
+      "cloudTypeCandidates": [
+        7
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion",
+        "/dataQuery/health/getHealthStat"
+      ],
+      "valueFields": "DATA_POINT_DYNAMIC_HEARTRATE/DATA_POINT_NEW_REST_HEARTRATE",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            571,
+            677,
+            678,
+            679,
+            680
+          ],
+          "needle": "health_data_item_bmp_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "健康状况",
+      "name": "体重与身体成分",
+      "viewId": "health_data_item_weight_layout",
+      "clickCallback": "HealthDatasActivity$q",
+      "localTypesOrConfigKeys": [
+        10006
+      ],
+      "cloudTypeCandidates": [
+        10006
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion"
+      ],
+      "valueFields": "bodyWeight/bodyFatRate/bmi等",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            572,
+            681,
+            682,
+            683
+          ],
+          "needle": "health_data_item_weight_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "健康状况",
+      "name": "睡眠",
+      "viewId": "health_data_item_sleep_layout",
+      "clickCallback": "HealthDatasActivity$o",
+      "localTypesOrConfigKeys": [
+        44102,
+        44103,
+        44101,
+        44001,
+        44002,
+        44108,
+        44105,
+        44109
+      ],
+      "cloudTypeCandidates": [
+        9,
+        500005,
+        700013
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion",
+        "/dataQuery/sequence/getSampleSequenceByVersion",
+        "/dataQuery/health/getHealthStat"
+      ],
+      "valueFields": "睡眠分期、日统计与详情",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            573,
+            687,
+            688,
+            689
+          ],
+          "needle": "health_data_item_sleep_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "健康状况",
+      "name": "血压",
+      "viewId": "health_data_item_bloodpresure_layout",
+      "clickCallback": "HealthDatasActivity$d",
+      "localTypesOrConfigKeys": [
+        2006,
+        2007
+      ],
+      "cloudTypeCandidates": [
+        10002
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion"
+      ],
+      "valueFields": "BLOOD_PRESSURE_SYSTOLIC/BLOOD_PRESSURE_DIASTOLIC",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            574,
+            690,
+            691,
+            692
+          ],
+          "needle": "health_data_item_bloodpresure_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "健康状况",
+      "name": "血糖",
+      "viewId": "health_data_item_bloodsugar_layout",
+      "clickCallback": "HealthDatasActivity$b",
+      "localTypesOrConfigKeys": [],
+      "cloudTypeCandidates": [
+        4,
+        500047
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion"
+      ],
+      "valueFields": "血糖采样/LastTimeHealthDataReader.CardData.BLOOD_SUGAR",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            575,
+            729,
+            730,
+            731
+          ],
+          "needle": "health_data_item_bloodsugar_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "健康状况",
+      "name": "血氧",
+      "viewId": "health_data_item_blood_oxygen_layout",
+      "clickCallback": "HealthDatasActivity$a",
+      "localTypesOrConfigKeys": [
+        2103
+      ],
+      "cloudTypeCandidates": [
+        16
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion",
+        "/dataQuery/health/getHealthStat"
+      ],
+      "valueFields": "BLOOD_OXYGEN_SATURATION",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            578,
+            726,
+            727,
+            728
+          ],
+          "needle": "health_data_item_blood_oxygen_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "健康状况",
+      "name": "压力",
+      "viewId": "health_data_item_stress_layout",
+      "clickCallback": "HealthDatasActivity$s",
+      "localTypesOrConfigKeys": [
+        2034
+      ],
+      "cloudTypeCandidates": [
+        11
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion",
+        "/dataQuery/health/getHealthStat"
+      ],
+      "valueFields": "STRESS_DATA/score/grade",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            579,
+            684,
+            685,
+            686
+          ],
+          "needle": "health_data_item_stress_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "健康状况",
+      "name": "体温或皮肤温度",
+      "viewId": "health_data_item_temperature_layout",
+      "clickCallback": "HealthDatasActivity$t",
+      "localTypesOrConfigKeys": [],
+      "cloudTypeCandidates": [
+        400011,
+        400012,
+        18
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion"
+      ],
+      "valueFields": "bodyTemperature/skinTemperature；显示受as条件控制",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            576,
+            732,
+            733,
+            734
+          ],
+          "needle": "health_data_item_temperature_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    },
+    {
+      "category": "健康状况",
+      "name": "生理周期",
+      "viewId": "health_data_item_physiologicalCycle_layout",
+      "clickCallback": "HealthDatasActivity$c",
+      "localTypesOrConfigKeys": [
+        47401
+      ],
+      "cloudTypeCandidates": [
+        400018,
+        400019
+      ],
+      "cloudEndpoints": [
+        "/dataQuery/health/getHealthDataByVersion"
+      ],
+      "valueFields": "生理记录与H5 cycle-calendar，部分路由由下载插件实现",
+      "relationship": "本地读取与云端同步的对应关系；每次打开页面不保证发出HTTP请求",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            221,
+            577,
+            735,
+            736,
+            737,
+            772
+          ],
+          "needle": "health_data_item_physiologicalCycle_layout"
+        }
+      ],
+      "cloudMappingStatus": "source_mapped; runtime参见接口清单，不表示手机页面已动态抓包"
+    }
+  ],
+  "hiddenItems": [
+    {
+      "category": "运动能力",
+      "name": "训练负荷（默认隐藏）",
+      "viewId": "health_data_item_load_layout",
+      "cloudEndpoints": [
+        "/dataQuery/report/getSampleReportByDay"
+      ],
+      "cloudTypeCandidates": [
+        300010
+      ],
+      "sourceBehavior": "k()中设为GONE且箭头隐藏；z()请求type=300010报告",
+      "evidence": [
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            583
+          ],
+          "needle": "relativeLayoutA.setVisibility(8)"
+        },
+        {
+          "file": "ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "packagedFile": "source-evidence/ui-decompiled/sources/com/huawei/ui/main/stories/health/activity/healthdata/HealthDatasActivity.java",
+          "lines": [
+            834
+          ],
+          "needle": "300010"
+        }
+      ]
+    }
+  ],
+  "scopeNotes": [
+    "这是本APK原生“我的数据”入口的配置；实际可见项受地区、设备、性别与灰度配置影响。",
+    "127个字典类型不是127个菜单项目；同一HTTP路径也不是每个type各一条独立API。",
+    "ArkUI-X与按需下载的H5插件另有数据层；不能凭原生页面或字符串清单证明服务端全部接口穷尽。"
+  ]
+}

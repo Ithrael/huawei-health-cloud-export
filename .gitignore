@@ -1,0 +1,8 @@
+.secrets/
+.local/
+exports/
+__pycache__/
+*.pyc
+.DS_Store
+*.apk
+*.zip

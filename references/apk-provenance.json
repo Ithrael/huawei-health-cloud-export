@@ -1,0 +1,14 @@
+{
+  "version": "17.0.10.300",
+  "versionCode": 1700010300,
+  "package": "com.huawei.health",
+  "sizeBytes": 289300035,
+  "sha256": "27e6c6dbaa96e09e1314a1b40d00db4e87e73e8c8c8cbb54bcd495cf386c3119",
+  "signerCertificateSha256": "b92825c2bd5d6d6d1e7f39eecd17843b7d9016f611136b75441bc6f4d3f00f05",
+  "sameSignerAsOldApk": true,
+  "v2SignaturePresent": true,
+  "source": "https://huawei-health.en.uptodown.com/android/download/1236555636",
+  "sourceVersionList": "https://huawei-health.en.uptodown.com/android/versions",
+  "downloadedAt": "2026-11-13",
+  "verification": "ZIP CRC通过；SHA-256与下载站一致；提取签名证书与旧包一致。未额外执行完整apksigner校验。"
+}

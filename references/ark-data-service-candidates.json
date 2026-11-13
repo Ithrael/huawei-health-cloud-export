@@ -1,0 +1,304 @@
+{
+  "scope": "ArkUI-X数据层候选，尚未逐条证明属于我的数据调用链",
+  "candidates": [
+    {
+      "path": "/dataService/v1/healthDatas/sampleConfigs/history",
+      "evidenceLevel": "ark_bytecode_method_confirmed",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "GET"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.core.src.main.ets.services.common.config.simple-config-synchronizer&0.1.0.#~@0>#downloadCloudSampleConfigByReq(any a0, any a1, any a2, any a3, any a4, any a5, any a6) <static> {",
+          "sourceLine": 482426,
+          "paths": [
+            "/dataService/v1/healthDatas/sampleConfigs/history"
+          ],
+          "httpMethodsInFunction": [
+            "GET"
+          ],
+          "literalObjectKeys": [
+            "GET",
+            "data",
+            "headers",
+            "method",
+            "url"
+          ],
+          "evidenceFile": "ark-evidence/29bb6c6f321f59dc.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataService/v1/dataSyncVersions",
+      "evidenceLevel": "ark_bytecode_method_confirmed",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "GET"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.core.src.main.ets.services.common.config.simple-config-synchronizer&0.1.0.#~@0>#getCloudVersion(any a0, any a1, any a2) <static> {",
+          "sourceLine": 482732,
+          "paths": [
+            "/dataService/v1/dataSyncVersions"
+          ],
+          "httpMethodsInFunction": [
+            "GET"
+          ],
+          "literalObjectKeys": [
+            "GET",
+            "data",
+            "headers",
+            "method",
+            "type",
+            "url"
+          ],
+          "evidenceFile": "ark-evidence/d1b5d38333c7928f.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataService/v1/healthDatas/sampleConfigs/",
+      "evidenceLevel": "ark_bytecode_method_confirmed",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "DELETE",
+        "PUT"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.core.src.main.ets.services.common.config.simple-config-synchronizer&0.1.0.#~@0>#pushData(any a0, any a1, any a2, any a3, any a4) <static> {",
+          "sourceLine": 484766,
+          "paths": [
+            "/dataService/v1/healthDatas/sampleConfigs/"
+          ],
+          "httpMethodsInFunction": [
+            "DELETE",
+            "PUT"
+          ],
+          "literalObjectKeys": [
+            "DELETE",
+            "PUT",
+            "data",
+            "deviceUniqueId",
+            "headers",
+            "localDevice",
+            "method",
+            "sampleConfigs",
+            "url"
+          ],
+          "evidenceFile": "ark-evidence/9c940613f025a174.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataService/v1/user/privacies",
+      "evidenceLevel": "ark_constant_reference",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "unknown"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.core.src.main.ets.services.common.user-privacy.user-privacy-mgr&0.1.0.#~@0>#static_initializer(any a0, any a1, any a2) <static> {",
+          "sourceLine": 540429,
+          "paths": [
+            "/dataService/v1/healthDatas",
+            "/dataService/v1/healthDatas/deleteAccountCheck",
+            "/dataService/v1/healthDatas/lastDelOperation",
+            "/dataService/v1/user/privacies"
+          ],
+          "httpMethodsInFunction": [],
+          "literalObjectKeys": [],
+          "evidenceFile": "ark-evidence/8e88cc9c764993d6.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataService/v1/healthDatas",
+      "evidenceLevel": "ark_constant_reference",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "unknown"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.core.src.main.ets.services.common.user-privacy.user-privacy-mgr&0.1.0.#~@0>#static_initializer(any a0, any a1, any a2) <static> {",
+          "sourceLine": 540429,
+          "paths": [
+            "/dataService/v1/healthDatas",
+            "/dataService/v1/healthDatas/deleteAccountCheck",
+            "/dataService/v1/healthDatas/lastDelOperation",
+            "/dataService/v1/user/privacies"
+          ],
+          "httpMethodsInFunction": [],
+          "literalObjectKeys": [],
+          "evidenceFile": "ark-evidence/8e88cc9c764993d6.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataService/v1/healthDatas/lastDelOperation",
+      "evidenceLevel": "ark_constant_reference",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "unknown"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.core.src.main.ets.services.common.user-privacy.user-privacy-mgr&0.1.0.#~@0>#static_initializer(any a0, any a1, any a2) <static> {",
+          "sourceLine": 540429,
+          "paths": [
+            "/dataService/v1/healthDatas",
+            "/dataService/v1/healthDatas/deleteAccountCheck",
+            "/dataService/v1/healthDatas/lastDelOperation",
+            "/dataService/v1/user/privacies"
+          ],
+          "httpMethodsInFunction": [],
+          "literalObjectKeys": [],
+          "evidenceFile": "ark-evidence/8e88cc9c764993d6.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataService/v1/healthDatas/deleteAccountCheck",
+      "evidenceLevel": "ark_constant_reference",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "unknown"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.core.src.main.ets.services.common.user-privacy.user-privacy-mgr&0.1.0.#~@0>#static_initializer(any a0, any a1, any a2) <static> {",
+          "sourceLine": 540429,
+          "paths": [
+            "/dataService/v1/healthDatas",
+            "/dataService/v1/healthDatas/deleteAccountCheck",
+            "/dataService/v1/healthDatas/lastDelOperation",
+            "/dataService/v1/user/privacies"
+          ],
+          "httpMethodsInFunction": [],
+          "literalObjectKeys": [],
+          "evidenceFile": "ark-evidence/8e88cc9c764993d6.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataService/v1/healthDatas/healthTrends",
+      "evidenceLevel": "ark_constant_reference",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "unknown"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.core.src.main.ets.services.domain.health-trend.health-trend-cloud-manager&0.1.0.#~@0>#static_initializer(any a0, any a1, any a2) <static> {",
+          "sourceLine": 612988,
+          "paths": [
+            "/dataService/v1/healthDatas/healthTrends"
+          ],
+          "httpMethodsInFunction": [],
+          "literalObjectKeys": [],
+          "evidenceFile": "ark-evidence/4fe3151471c97f2d.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataStat/highlights/getHighlights",
+      "evidenceLevel": "ark_constant_reference",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "unknown"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.health.src.main.ets.common.digest.card.digest-card-factory&1.0.0.#~@0<#obtainDigestDataFromCloud(any a0, any a1, any a2, any a3) <static> {",
+          "sourceLine": 1300448,
+          "paths": [
+            "/dataService/v1/healthDatas/highlights",
+            "/dataStat/highlights/getHighlights"
+          ],
+          "httpMethodsInFunction": [],
+          "literalObjectKeys": [
+            "data",
+            "headers",
+            "method",
+            "timeout",
+            "url"
+          ],
+          "evidenceFile": "ark-evidence/13a092c2d6faf5d8.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataService/v1/healthDatas/highlights",
+      "evidenceLevel": "ark_constant_reference",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "unknown"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.health.src.main.ets.common.digest.card.digest-card-factory&1.0.0.#~@0<#obtainDigestDataFromCloud(any a0, any a1, any a2, any a3) <static> {",
+          "sourceLine": 1300448,
+          "paths": [
+            "/dataService/v1/healthDatas/highlights",
+            "/dataStat/highlights/getHighlights"
+          ],
+          "httpMethodsInFunction": [],
+          "literalObjectKeys": [
+            "data",
+            "headers",
+            "method",
+            "timeout",
+            "url"
+          ],
+          "evidenceFile": "ark-evidence/13a092c2d6faf5d8.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    },
+    {
+      "path": "/dataService/v1/healthDatas/sampleEvents",
+      "evidenceLevel": "ark_constant_reference",
+      "source": "assets/arkui-x/arkuix/ets/modules.abc",
+      "methods": [
+        "unknown"
+      ],
+      "runtimeVerification": "not_called",
+      "evidence": [
+        {
+          "function": ".function any &@health-ohos.health.src.main.ets.features.blood-sugar.algorithm.bg-spike-calculator&1.0.0.#~@0>#static_initializer(any a0, any a1, any a2) <static> {",
+          "sourceLine": 1701283,
+          "paths": [
+            "/dataService/v1/healthDatas/sampleEvents"
+          ],
+          "httpMethodsInFunction": [],
+          "literalObjectKeys": [],
+          "evidenceFile": "ark-evidence/9d63b923c7e592c3.pa",
+          "confidence": "bytecode_call_or_constant;未代表已动态验证"
+        }
+      ]
+    }
+  ]
+}

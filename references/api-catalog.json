@@ -1,0 +1,1481 @@
+{
+  "count": 26,
+  "interfaces": [
+    {
+      "method": "POST",
+      "path": "/dataAnalyse/app/getRunLevel",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetRunLevelReq.java",
+          "lines": [
+            49
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetRunLevelReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetRunLevelReq.java",
+          "fields": [
+            {
+              "key": "endDay",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "queryType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "startDay",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "timeZone",
+              "javaType": "String",
+              "defaultExpression": null
+            },
+            {
+              "key": "types",
+              "javaType": "Set<Integer>",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetRunLevelRsp",
+          "responseFields": [
+            {
+              "key": "data",
+              "javaType": "Map<Integer, RunLevelDetail>",
+              "defaultExpression": null
+            },
+            {
+              "key": "userRunLevelData",
+              "javaType": "UserRunLevelData",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/common/getSyncVersions",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSyncVersionsReq.java",
+          "lines": [
+            13
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSyncVersionsReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSyncVersionsReq.java",
+          "fields": [
+            {
+              "key": "syncKeys",
+              "javaType": "List<SyncKey>",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetSyncVersionsRsp",
+          "responseFields": [
+            {
+              "key": "versions",
+              "javaType": "List<SyncKey>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_metadata"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/health/getHealthData",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthDataByTimeReq.java",
+          "lines": [
+            40
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetHealthDataByTimeReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthDataByTimeReq.java",
+          "fields": [
+            {
+              "key": "dataType",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "endTime",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "queryType",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "startTime",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "type",
+              "javaType": "Integer",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetHealthDataByTimeRsp",
+          "responseFields": [
+            {
+              "key": "data",
+              "javaType": "Map<String, List<HealthDetail>>",
+              "defaultExpression": null
+            },
+            {
+              "key": "detailInfos",
+              "javaType": "List<HealthDetail>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "returned_data"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/health/getHealthDataByRecordDay",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthDataByReversedOrderReq.java",
+          "lines": [
+            40
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetHealthDataByReversedOrderReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthDataByReversedOrderReq.java",
+          "fields": [
+            {
+              "key": "dataType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "recordDay",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "type",
+              "javaType": "int",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetHealthDataByReversedOrderRsp",
+          "responseFields": [
+            {
+              "key": "currentRecordDay",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "data",
+              "javaType": "Map<String, List<HealthDetail>>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/health/getHealthDataByVersion",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthDataByVersionReq.java",
+          "lines": [
+            26
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetHealthDataByVersionReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthDataByVersionReq.java",
+          "fields": [
+            {
+              "key": "dataType",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "type",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "version",
+              "javaType": "long",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetHealthDataByVersionRsp",
+          "responseFields": [
+            {
+              "key": "currentVersion",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "detailInfos",
+              "javaType": "List<HealthDetail>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "returned_data"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/health/getHealthDataLatest",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetLatestLacticReq.java",
+          "lines": [
+            11
+          ]
+        },
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthDataLatestReq.java",
+          "lines": [
+            15
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetLatestLacticReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetLatestLacticReq.java",
+          "fields": [
+            {
+              "key": "counts",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "dataType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "timestamp",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "type",
+              "javaType": "int",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetLatestLacticRsp",
+          "responseFields": [
+            {
+              "key": "detailInfos",
+              "javaType": "List<LacticData>",
+              "defaultExpression": null
+            }
+          ]
+        },
+        {
+          "class": "GetHealthDataLatestReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthDataLatestReq.java",
+          "fields": [
+            {
+              "key": "counts",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "dataType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "days",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "timestamp",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "type",
+              "javaType": "int",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetHealthDataLatestRsp",
+          "responseFields": [
+            {
+              "key": "detailInfos",
+              "javaType": "List<HealthDetail>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "returned_data"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/health/getHealthStat",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthStatReq.java",
+          "lines": [
+            36
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetHealthStatReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetHealthStatReq.java",
+          "fields": [
+            {
+              "key": "dataSource",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "endTime",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "startTime",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "types",
+              "javaType": "Set<Integer>",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetHealthStatRsp",
+          "responseFields": [
+            {
+              "key": "bloodOxygenSaturationTotal",
+              "javaType": "List<BloodOxygenSaturationTotal>",
+              "defaultExpression": null
+            },
+            {
+              "key": "bradycardiaAlarmTotal",
+              "javaType": "List<BradycardiaAlarmTotal>",
+              "defaultExpression": null
+            },
+            {
+              "key": "exerciseIntensityTotal",
+              "javaType": "List<ExerciseIntensityTotal>",
+              "defaultExpression": null
+            },
+            {
+              "key": "heartRateRiseAlarmTotal",
+              "javaType": "List<HeartRateRiseAlarmTotal>",
+              "defaultExpression": null
+            },
+            {
+              "key": "heartRateTotal",
+              "javaType": "List<HeartRateTotal>",
+              "defaultExpression": null
+            },
+            {
+              "key": "menstrualTotal",
+              "javaType": "List<MenstrualTotal>",
+              "defaultExpression": null
+            },
+            {
+              "key": "professionalSleepTotal",
+              "javaType": "List<ProfessionalSleepTotal>",
+              "defaultExpression": null
+            },
+            {
+              "key": "sleepTotal",
+              "javaType": "List<SleepTotal>",
+              "defaultExpression": null
+            },
+            {
+              "key": "stressTotal",
+              "javaType": "List<StressTotal>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "returned_data"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/health/getHealthStatistics",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/fitness-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetLacticStatisticsReq.java",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetLacticStatisticsReq",
+          "file": "source-evidence/fitness-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetLacticStatisticsReq.java",
+          "fields": [
+            {
+              "key": "endTime",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "startTime",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "types",
+              "javaType": "int[]",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetLacticStatisticsRsp",
+          "responseFields": [
+            {
+              "key": "statisticTotal",
+              "javaType": "Map<Integer, List<LacticStatistics>>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/health/getHealthStatisticsByVersion",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hihealthservice/sync/syncdata/dictionary/statistics/HealthStatisticsDownloadByVersionReq.java",
+          "lines": [
+            68
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "HealthStatisticsDownloadByVersionReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hihealthservice/sync/syncdata/dictionary/statistics/HealthStatisticsDownloadByVersionReq.java",
+          "fields": [
+            {
+              "key": "dataSource",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "dataType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "type",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "version",
+              "javaType": "long",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "HealthStatisticsDownloadByVersionRsp",
+          "responseFields": [
+            {
+              "key": "currentVersion",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "statisticTotal",
+              "javaType": "Map<String, List<HealthStatistics>>",
+              "defaultExpression": "new HashMap()"
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/path/getMotionPathByVersion",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/utils/NspClient.java",
+          "lines": [
+            115
+          ]
+        },
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetMotionPathByVersionReq.java",
+          "lines": [
+            26
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetMotionPathByVersionReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetMotionPathByVersionReq.java",
+          "fields": [
+            {
+              "key": "condition",
+              "javaType": "String",
+              "defaultExpression": null
+            },
+            {
+              "key": "dataType",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "version",
+              "javaType": "Long",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetMotionPathByVersionRsp",
+          "responseFields": [
+            {
+              "key": "currentVersion",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "detailInfos",
+              "javaType": "List<MotionPathDetail>",
+              "defaultExpression": null
+            },
+            {
+              "key": "deleteInfos",
+              "javaType": "List<BaseMetaData>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/path/getMotionPathData",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/defpackage/mlg.java",
+          "lines": [
+            217
+          ]
+        },
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/utils/NspClient.java",
+          "lines": [
+            115
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetMotionPathByTimeReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetMotionPathByTimeReq.java",
+          "fields": [
+            {
+              "key": "dataType",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "endTime",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "queryType",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "startTime",
+              "javaType": "Long",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "not_tested"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/report/getCycleReport",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/extra-decompiled/sources/ezu$2.java",
+          "lines": [
+            32
+          ]
+        }
+      ],
+      "requestModels": [],
+      "scope": "关联功能：跳绳月度最佳记录，不是生理周期接口",
+      "requestFieldNames": [
+        "bestItems",
+        "queryType",
+        "startTime",
+        "endTime",
+        "timeZone"
+      ],
+      "requestConstants": {
+        "queryType": 1
+      },
+      "requestFieldEvidence": {
+        "file": "extra-decompiled/sources/ezu$2.java",
+        "packagedFile": "source-evidence/extra-decompiled/sources/ezu$2.java",
+        "lines": [
+          23
+        ],
+        "needle": "bestItems"
+      },
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/report/getPersonalReport",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/defpackage/vnl.java",
+          "lines": [
+            56
+          ]
+        }
+      ],
+      "requestModels": [],
+      "requestExample": {
+        "accumulatedItems": [
+          "accumPerfectGoalAchievedDays"
+        ]
+      },
+      "requestExampleEvidence": {
+        "file": "core-decompiled/sources/defpackage/vnl.java",
+        "packagedFile": "source-evidence/core-decompiled/sources/defpackage/vnl.java",
+        "lines": [
+          54
+        ],
+        "needle": "accumulatedItems"
+      },
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "returned_data"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/report/getSampleReportByDay",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetLoadPeakReq.java",
+          "lines": [
+            11
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetLoadPeakReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetLoadPeakReq.java",
+          "fields": [
+            {
+              "key": "dataType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "endDay",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "recordDay",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "startDay",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "type",
+              "javaType": "int",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetLoadPeakRsp",
+          "responseFields": [
+            {
+              "key": "data",
+              "javaType": "Map<String, List<LoadPeakDataContainer>>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/sequence/getSampleSequenceByTime",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/fitness-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSampleSequenceByTimeReq.java",
+          "lines": [
+            83
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSampleSequenceByTimeReq",
+          "file": "source-evidence/fitness-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSampleSequenceByTimeReq.java",
+          "fields": [
+            {
+              "key": "dataType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "endTime",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "queryType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "startTime",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "mType",
+              "javaType": "int",
+              "defaultExpression": null,
+              "serializedNameExpression": "ProfileUtilsSdk.TYPE",
+              "serializedKeyNeedsConfirmation": true
+            }
+          ],
+          "responseClass": "GetSampleSequenceByTimeRsp",
+          "responseFields": [
+            {
+              "key": "detailInfos",
+              "javaType": "List<SampleSequence>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "not_tested"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/sequence/getSampleSequenceByVersion",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hihealthservice/sync/syncdata/dictionary/detail/GetSampleSequenceByVersionReq.java",
+          "lines": [
+            92
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSampleSequenceByVersionReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hihealthservice/sync/syncdata/dictionary/detail/GetSampleSequenceByVersionReq.java",
+          "fields": [
+            {
+              "key": "dataType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "subTypes",
+              "javaType": "int[]",
+              "defaultExpression": null
+            },
+            {
+              "key": "type",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "version",
+              "javaType": "long",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetSampleSequenceByVersionRsp",
+          "responseFields": [
+            {
+              "key": "currentVersion",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "deleteInfos",
+              "javaType": "List<BaseMetaData>",
+              "defaultExpression": null
+            },
+            {
+              "key": "detailInfos",
+              "javaType": "List<SampleSequence>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "returned_data"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/sequence/getSampleSequenceLatest",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hihealthservice/sync/syncdata/dictionary/detail/GetSampleSequenceLatestReq.java",
+          "lines": [
+            15
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSampleSequenceLatestReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hihealthservice/sync/syncdata/dictionary/detail/GetSampleSequenceLatestReq.java",
+          "fields": [
+            {
+              "key": "counts",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "dataType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "days",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "timestamp",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "type",
+              "javaType": "int",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetSampleSequenceLatestRsp",
+          "responseFields": [
+            {
+              "key": "detailInfos",
+              "javaType": "List<SampleSequence>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "failed"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/sport/getSleepSportsDataLatest",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSleepSportsDataLatestReq.java",
+          "lines": [
+            14
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSleepSportsDataLatestReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSleepSportsDataLatestReq.java",
+          "fields": [
+            {
+              "key": "counts",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "dataType",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "days",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "timestamp",
+              "javaType": "long",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetSleepSportsDataLatestRsp",
+          "responseFields": [
+            {
+              "key": "detailInfos",
+              "javaType": "List<SportDetail>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/sport/getSleepStat",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/defpackage/mlg.java",
+          "lines": [
+            211
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSleepStatReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/model/unite/GetSleepStatReq.java",
+          "fields": [
+            {
+              "key": "dataSource",
+              "javaType": "Integer",
+              "defaultExpression": "2"
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "endTime",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "startTime",
+              "javaType": "Integer",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetSleepStatRsp",
+          "responseFields": [
+            {
+              "key": "sleepTotals",
+              "javaType": "List<SleepTotal>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/sport/getSportsDataByTime",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSportDataByTimeReq.java",
+          "lines": [
+            42
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSportDataByTimeReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSportDataByTimeReq.java",
+          "fields": [
+            {
+              "key": "dataType",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "endTime",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "queryType",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "sportTypes",
+              "javaType": "Set<Integer>",
+              "defaultExpression": null
+            },
+            {
+              "key": "startTime",
+              "javaType": "Long",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetSportDataByTimeRsp",
+          "responseFields": [
+            {
+              "key": "data",
+              "javaType": "Map<String, List<SportDetail>>",
+              "defaultExpression": null
+            },
+            {
+              "key": "detailInfos",
+              "javaType": "List<SportDetail>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "success_empty"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/sport/getSportsDataByVersion",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSportDataByVersionReq.java",
+          "lines": [
+            21
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSportDataByVersionReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSportDataByVersionReq.java",
+          "fields": [
+            {
+              "key": "dataType",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "version",
+              "javaType": "Long",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetSportDataByVersionRsp",
+          "responseFields": [
+            {
+              "key": "currentVersion",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "data",
+              "javaType": "Map<String, List<SportDetail>>",
+              "defaultExpression": null
+            },
+            {
+              "key": "detailInfos",
+              "javaType": "List<SportDetail>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "returned_data"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/sport/getSportsDimenStat",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSportDimenStatisticsReq.java",
+          "lines": [
+            31
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSportDimenStatisticsReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSportDimenStatisticsReq.java",
+          "fields": [
+            {
+              "key": "dataSource",
+              "javaType": "Integer",
+              "defaultExpression": "2"
+            },
+            {
+              "key": "endTime",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "sportTypes",
+              "javaType": "Set<Integer>",
+              "defaultExpression": null
+            },
+            {
+              "key": "startTime",
+              "javaType": "Integer",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "returned_data"
+    },
+    {
+      "method": "POST",
+      "path": "/dataQuery/sport/v2/getSportsStat",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSportStatReq.java",
+          "lines": [
+            31
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSportStatReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hwcloudmodel/healthdatacloud/model/GetSportStatReq.java",
+          "fields": [
+            {
+              "key": "dataSource",
+              "javaType": "Integer",
+              "defaultExpression": "2"
+            },
+            {
+              "key": "deviceCode",
+              "javaType": "Long",
+              "defaultExpression": null
+            },
+            {
+              "key": "endTime",
+              "javaType": "Integer",
+              "defaultExpression": null
+            },
+            {
+              "key": "startTime",
+              "javaType": "Integer",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetSportStatRsp",
+          "responseFields": [
+            {
+              "key": "sportStat",
+              "javaType": "List<SportTotalData>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "健康云公共参数，常见token/tokenType/appId/x-huid；以对应Factory为准",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "returned_data"
+    },
+    {
+      "method": "GET",
+      "path": "/dataService/v1/healthDatas/sampleReports/history",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hihealthservice/sync/syncdata/dictionary/detail/GetSamplePeriodicReportByVersionReq.java",
+          "lines": [
+            28
+          ]
+        }
+      ],
+      "requestModels": [
+        {
+          "class": "GetSamplePeriodicReportByVersionReq",
+          "file": "source-evidence/core-decompiled/sources/com/huawei/hihealthservice/sync/syncdata/dictionary/detail/GetSamplePeriodicReportByVersionReq.java",
+          "fields": [
+            {
+              "key": "type",
+              "javaType": "int",
+              "defaultExpression": null
+            },
+            {
+              "key": "version",
+              "javaType": "long",
+              "defaultExpression": null
+            }
+          ],
+          "responseClass": "GetSamplePeriodicReportByVersionRsp",
+          "responseFields": [
+            {
+              "key": "currentVersion",
+              "javaType": "long",
+              "defaultExpression": null
+            },
+            {
+              "key": "insertedList",
+              "javaType": "List<SamplePeriodicReport>",
+              "defaultExpression": null
+            }
+          ]
+        }
+      ],
+      "authentication": "Authorization: Bearer <应用NEW_ACCESS_TOKEN>；未把现有健康令牌自动当作此Bearer",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "not_tested"
+    },
+    {
+      "method": "POST",
+      "path": "/achievement/v1/ftp:refresh",
+      "hostKey": "achievementUrl",
+      "hostCN": "https://achievement.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/fitness-decompiled/sources/defpackage/qzt.java",
+          "lines": [
+            253
+          ]
+        }
+      ],
+      "requestModels": [],
+      "authentication": "应用NEW_ACCESS_TOKEN的Bearer与服务令牌/签名链；不把健康接口tokenType=2直接套用",
+      "sideEffect": "refresh/calculate，不作为纯历史读取调用",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "not_tested"
+    },
+    {
+      "method": "POST",
+      "path": "/dataStat/v1/basicCalculations/lifetimeStatistics:calculate",
+      "hostKey": "healthCloudUrl",
+      "hostCN": "https://healthdata.dbankcloud.cn",
+      "evidenceLevel": "source_call_chain",
+      "evidence": [
+        {
+          "file": "source-evidence/fitness-decompiled/sources/defpackage/qzt.java",
+          "lines": [
+            350
+          ]
+        }
+      ],
+      "requestModels": [],
+      "authentication": "应用NEW_ACCESS_TOKEN的Bearer与服务令牌/签名链；不把健康接口tokenType=2直接套用",
+      "sideEffect": "refresh/calculate，不作为纯历史读取调用",
+      "verifiedAt": "2026-11-13",
+      "runtimeStatus": "not_tested"
+    }
+  ]
+}
