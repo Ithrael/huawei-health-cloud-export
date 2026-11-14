@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>健康全景 · 华为运动健康</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230e243b'/%3E%3Cpath d='M5 17h6l3-8 5 15 3-7h5' fill='none' stroke='%2351dccb' stroke-width='2.5'/%3E%3C/svg%3E">
+  <style>/* DASHBOARD_CSS */</style>
+</head>
+<body>
+<svg class="symbols" aria-hidden="true"><defs>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M2 12h5l3-8 5 16 3-8h4"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+  <symbol id="i-step" viewBox="0 0 24 24"><path d="m13 3-2 6 4 3 1 5m-5-8-4 4-4 1m8-1-3 8m7-14 4 3 3-1"/><circle cx="16" cy="3" r="1.5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.7 15A9 9 0 0 1 9 3.3 9 9 0 1 0 20.7 15Z"/><path d="M17 2v4m-2-2h4m2 3v4m-2-2h4"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+  <symbol id="i-source" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 4 16 4 16 0V5M4 12v7c0 4 16 4 16 0v-7"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 2c1 7-7 7-7 14a7 7 0 0 0 14 0c0-4-3-7-3-7 1 5-2 5-2 5 1-5-2-12-2-12Z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h8a4 4 0 0 1 0 8H9a3 3 0 0 0 0 6h8"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 10 7-10 7Z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+</defs></svg>
+<aside class="rail" aria-label="大屏导航" hidden>
+  <a class="mark" href="#overview" aria-label="健康全景首页"><svg><use href="#i-pulse"/></svg></a>
+  <div class="rail-nav">
+    <a class="rail-link active" href="#overview" aria-label="总览" title="总览"><svg><use href="#i-grid"/></svg></a>
+    <a class="rail-link" href="#trend-panel" aria-label="活动趋势" title="活动趋势"><svg><use href="#i-step"/></svg></a>
+    <a class="rail-link" href="#sleep-panel" aria-label="睡眠结构" title="睡眠结构"><svg><use href="#i-moon"/></svg></a>
+  </div>
+  <button class="rail-link" id="rail-source" aria-label="数据与来源" title="数据与来源"><svg><use href="#i-source"/></svg></button>
+  <div class="rail-bottom"><span class="offline-light"></span><span>本地</span></div>
+</aside>
+<main id="overview">
+  <header class="topbar">
+    <div class="brand"><span class="brand-symbol"><svg><use href="#i-pulse"/></svg></span><span>运动健康</span><span class="brand-subtitle">华为健康数据</span></div>
+    <nav class="view-tabs" aria-label="数据视图"><button data-view="overview" class="selected" aria-pressed="true">健康总览</button><button data-view="metrics" aria-pressed="false">全部指标</button><button data-view="archive" aria-pressed="false">数据档案 <span id="archive-count"></span></button></nav>
+    <div class="top-actions"><span class="data-badge" id="data-badge"></span><button class="text-button" id="source-button"><svg><use href="#i-source"/></svg>数据与来源</button><button class="icon-button" id="fullscreen" aria-label="进入全屏" title="全屏"><svg><use href="#i-expand"/></svg></button></div>
+  </header>
+  <section class="page-heading">
+    <div><div class="heading-kicker">每一份努力，都有记录</div><h1><span id="page-title">我的运动健康</span></h1><p id="range-description"></p></div>
+    <div class="heading-controls"><div class="period-tabs" role="group" aria-label="趋势时间范围"><button data-period="7" class="selected" aria-pressed="true">近 7 天</button><button data-period="30" aria-pressed="false">近 30 天</button></div><div class="date-control" role="group" aria-label="查看日期"><button id="previous-date" class="date-arrow" aria-label="前一天"><svg><use href="#i-arrow"/></svg></button><label class="date-picker"><input type="date" id="selected-date" aria-label="查看日期"></label><button id="next-date" class="date-arrow" aria-label="后一天"><svg><use href="#i-arrow"/></svg></button></div></div>
+  </section>
+  <div id="view-overview" class="view-page"><div class="dashboard-grid">
+    <section class="panel activity-panel" aria-labelledby="activity-title">
+      <div class="panel-heading"><h2 id="activity-title"><span class="metric-icon activity-icon"><svg><use href="#i-fire"/></svg></span>每日活动</h2><button id="goal-button" class="quiet-button">调整目标 <svg><use href="#i-arrow"/></svg></button></div>
+      <div class="activity-main"><div class="ring-wrap"><svg id="activity-rings" viewBox="0 0 300 300" role="img" aria-label="活动目标完成度"></svg><div class="ring-center"><svg><use href="#i-step"/></svg><span>步数目标</span><strong id="ring-percent">—</strong></div></div>
+      <div class="activity-numbers"><div class="eyebrow">已走步数</div><div class="hero-number" id="steps-value">—</div><div class="goal-line">目标 <span id="steps-goal">10,000</span> 步 <span class="goal-marker" id="goal-state"></span></div><div class="activity-note" id="activity-note"></div><div class="mini-metrics"><div><span><i class="mini-dot coral"></i>活动热量</span><strong id="calorie-value">—</strong><small>kcal</small></div><div><span><i class="mini-dot lavender"></i>行走距离</span><strong id="distance-value">—</strong><small>km</small></div></div></div></div>
+      <div class="activity-bottom"><span id="activity-source">来源 —</span><span>自定义三环 · 步数 / 热量 / 距离</span></div>
+    </section>
+    <section class="panel metric-panel heart-panel" aria-labelledby="heart-title"><div class="panel-heading"><h2 id="heart-title"><span class="metric-icon heart-icon"><svg><use href="#i-heart"/></svg></span>心率</h2><button class="card-detail" data-jump-name="HEART_RATE" aria-label="查看心率详情"><svg><use href="#i-arrow"/></svg></button></div><div class="metric-reading"><strong id="heart-value">—</strong><span>次/分钟</span><span class="metric-symbol coral-text" aria-hidden="true">♥</span></div><div class="sparkline" id="heart-chart"></div><div class="metric-foot"><span id="heart-time">无记录</span><span id="heart-range"></span></div></section>
+    <section class="panel metric-panel hrv-panel" id="hrv-panel" aria-labelledby="hrv-title"><div class="panel-heading"><h2 id="hrv-title" title="HRV（心率变异性），此处显示 RMSSD，单位为毫秒。数值与曲线来自所选日期和来源。"><span class="metric-icon hrv-icon"><svg><use href="#i-pulse"/></svg></span>HRV<span class="hrv-long-name">心率变异性</span></h2><button class="card-detail" data-jump-name="HEART_RATE_VARIABILITY" aria-label="查看HRV详情"><svg><use href="#i-arrow"/></svg></button></div><div class="metric-reading"><strong id="hrv-value">—</strong><span>毫秒</span><span class="hrv-decoration" aria-hidden="true">≋</span></div><div class="sparkline" id="hrv-chart"></div><div class="metric-foot"><span id="hrv-time">无记录</span><span id="hrv-count">最近一次测量</span></div></section>
+    <section class="panel trend-panel" id="trend-panel" aria-labelledby="trend-title"><div class="panel-heading"><div><h2 id="trend-title">活动趋势</h2><p class="panel-subtitle" id="trend-subtitle"></p></div><div class="metric-tabs" role="group" aria-label="趋势指标"><button data-metric="steps" class="selected" aria-pressed="true">步数</button><button data-metric="calorie" aria-pressed="false">热量</button><button data-metric="distance" aria-pressed="false">距离</button></div></div><div class="trend-summary"><strong id="trend-average">—</strong><span id="trend-unit">步 / 日均</span><span class="trend-total" id="trend-total"></span></div><div class="bar-chart" id="trend-chart"></div><div class="chart-caption"><span><i class="mini-dot teal"></i>当日记录 <i class="mini-dot muted-dot"></i>其他日期</span><span>点击柱形，查看当天数据</span></div></section>
+    <section class="panel sleep-panel" id="sleep-panel" aria-labelledby="sleep-title"><div class="panel-heading"><h2 id="sleep-title"><span class="metric-icon sleep-icon"><svg><use href="#i-moon"/></svg></span>睡眠</h2><div class="sleep-heading-meta"><span class="small-tag" id="sleep-night">前一夜</span><button class="card-detail" data-jump-name="SLEEP_DETAILS" aria-label="查看睡眠详情"><svg><use href="#i-arrow"/></svg></button></div></div><div class="sleep-top"><div class="sleep-reading" id="sleep-duration">—<small>暂无可解码时长</small></div><div class="sleep-score"><span>记录评分</span><strong id="sleep-score">—</strong></div></div><div class="sleep-chart" id="sleep-chart"></div><div class="sleep-legend" id="sleep-legend"></div><div class="sleep-footer"><span id="sleep-window"></span><span>仅统计已识别的睡眠区间</span></div></section>
+    <section class="panel stress-panel" aria-labelledby="stress-title"><div class="panel-heading"><h2 id="stress-title"><span class="metric-icon stress-icon"><svg><use href="#i-pulse"/></svg></span>压力</h2><button class="card-detail" data-jump-name="STRESS" aria-label="查看压力详情"><svg><use href="#i-arrow"/></svg></button></div><div class="stress-body"><div class="stress-value"><strong id="stress-value">—</strong><span>原始分数 · 最近一次</span></div><div class="stress-visual"><div id="stress-chart"></div><div class="metric-foot"><span id="stress-time">无记录</span><span id="stress-count"></span></div></div></div></section>
+    <section class="insight-panel" aria-label="数据观察"><div class="insight-icon"><svg><use href="#i-grid"/></svg></div><div><span>这一段日常</span><p id="observation"></p></div><div class="observation-stat"><strong id="record-days">—</strong><span>天活动记录</span></div></section>
+  </div>
+  </div>
+  <section id="view-metrics" class="view-page" hidden aria-label="全部指标">
+    <div class="archive-summary" id="all-summary"></div>
+    <div class="all-toolbar"><div id="category-filters" class="category-filters" role="group" aria-label="指标分类"></div><label class="compact-label">时间范围<select id="metrics-scope"><option value="all">全部导出日期</option><option value="window">所选 7 / 30 天</option></select></label></div>
+    <div class="all-info">切换字段，查看不同指标；来源分别展示。所有原始记录均可在「数据档案」查看。</div>
+    <div id="all-metric-grid" class="all-metric-grid"></div>
+  </section>
+  <section id="view-archive" class="view-page" hidden aria-label="完整数据档案">
+    <div class="archive-summary" id="archive-summary"></div>
+    <div class="archive-layout">
+      <aside class="archive-sidebar"><label class="search-box"><svg><use href="#i-source"/></svg><input id="file-search" type="search" placeholder="搜索类型、接口、文件" aria-label="搜索数据文件"></label><div class="file-filters"><select id="file-kind" aria-label="文件分类"><option value="all">全部文件</option><option value="datasets">数据集</option><option value="interfaces">接口结果</option><option value="activity">活动统计</option><option value="metadata">字段与覆盖说明</option></select><select id="file-status" aria-label="文件状态"><option value="all">全部状态</option><option value="data">有数据</option><option value="empty">成功但为空</option><option value="not_called">未调用</option><option value="partial">部分覆盖</option></select></div><p id="file-match-count" class="file-match-count"></p><div id="archive-file-list" class="archive-file-list"></div></aside>
+      <section class="panel archive-workbench" aria-live="polite"><div class="archive-heading"><div><h2 id="archive-title">选择一个数据文件</h2><p id="archive-file-path"></p></div><button class="download-button" id="download-artifact" disabled>下载完整 JSON</button></div><div id="archive-file-meta" class="coverage-row"></div><div class="record-toolbar"><select id="record-collection" aria-label="记录集合"><option value="records">记录</option></select><select id="record-source" aria-label="记录来源"><option value="all">全部来源</option></select><select id="record-date-scope" aria-label="记录日期范围"><option value="all">全部日期（含无日期）</option><option value="window">所选 7 / 30 天</option><option value="day">所选日期</option><option value="undated">仅无日期</option></select><input type="search" id="record-search" placeholder="搜索记录中的字段或值" aria-label="搜索记录"></div><div id="record-message" class="record-message"></div><div id="record-content" class="record-content"></div><div class="record-pagination"><span id="record-count-label"></span><div><button id="record-prev" class="quiet-button">上一页</button><span id="record-page"></span><button id="record-next" class="quiet-button">下一页</button></div></div></section>
+    </div>
+  </section>
+  <footer class="page-footer"><span><span class="offline-light"></span>离线数据快照 <span class="footer-separator">/</span><span id="footer-mode"></span></span><div><span id="coverage-summary"></span><button id="motion-button" class="quiet-button" aria-pressed="false"><svg><use href="#i-pause"/></svg><span>暂停动效</span></button></div></footer>
+</main>
+<dialog id="source-dialog"><div class="dialog-heading"><div><h2>数据与来源</h2><p>每个指标单独选择来源，保留导出时的覆盖状态。</p></div><button class="icon-button" data-close aria-label="关闭"><svg><use href="#i-close"/></svg></button></div><div id="source-content"></div><p class="dialog-note">数据仅在此 HTML 中展示。修改来源只影响当前视图；未知字段仍保留在原始导出文件中。</p></dialog>
+<dialog id="goals-dialog"><form id="goals-form"><div class="dialog-heading"><div><h2>设置每日目标</h2><p>目标只用于活动环展示，与你自己的节奏保持一致。</p></div><button type="button" class="icon-button" data-close aria-label="关闭"><svg><use href="#i-close"/></svg></button></div><label>步数 <span>步</span><input name="steps" type="number" min="1" max="100000" value="10000" required></label><label>活动热量 <span>kcal</span><input name="calorie" type="number" min="1" max="10000" value="500" required></label><label>行走距离 <span>km</span><input name="distance" type="number" min="0.1" max="1000" step="0.1" value="8" required></label><button class="primary-button" type="submit">应用目标</button></form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="application/json" id="dashboard-data"><!-- DASHBOARD_DATA --></script>
+<script>/* DASHBOARD_JS */</script>
+</body>
+</html>
